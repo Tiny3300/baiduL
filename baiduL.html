@@ -46,15 +46,14 @@
         var oInput = document.getElementsByTagName('input')[0];
         var oUl = document.getElementsByTagName('ul')[0];
         oInput.oninput = function () {
-            //文本发生改变的时候
             var value = oInput.value;
             var oScript = document.createElement('script');
-            oScript.src = 'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=' + value + '&cb=aa';
+            oScript.src = 'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=' + value + '&cb=show';
             document.body.appendChild(oScript);
             document.body.removeChild(oScript);
         }
 
-        function aa(data) {
+        function show(data) {
             var s = data.s;
             var str = '';
             if (s.length > 0) {
